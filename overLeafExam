@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{legalpaper, portrait, margin=31mm}
+\textwidth = 140mm
+\textheight = 210mm
+\footskip = 16mm
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{kantlipsum}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[breakable, theorems, skins]{tcolorbox}
+\tcbset{enhanced}
+\usepackage{tikz}
+
+\definecolor{grayd}{gray}{1}
+\definecolor{gray}{gray}{0.6}
+
+\DeclareRobustCommand{\mybox}[2][gray!20]{%
+\begin{tcolorbox}[   
+        breakable,
+        left=0pt,
+        right=0pt,
+        top=0pt,
+        bottom=0pt,
+        colback=#1,
+        colframe=#1,
+        width=\dimexpr\textwidth\relax, 
+        enlarge left by=0mm,
+        boxsep=5pt,
+        arc=0pt,outer arc=0pt,
+        ]
+        #2
+\end{tcolorbox}
+}
+\begin{document}
+\[
+d = 
+\begin{bmatrix}
+    4 \\
+    4 \\
+    13 \\
+    18
+\end{bmatrix}
+\]
+
+\item \mybox{THEOREM\textbf{ 4}}
+
+\item[yellow]\mybox{{Consider an LP in standard form, having bfs $\textbf{b}_1$, $\textbf{b}_2$,..., $\textbf{b}_k$. Any point \textbf{x} in the LP's feasible region may be written in the form
+
+$$\textbf{x = d} + \sum \frac{i=e}{i=1} \sigma_i \textbf{b}_i$$
+
+where \textbf{d} is \textbf{0} or a direction of unboundedness and $\sum \frac{i=e}{i=1}$ $\sigma_i = 1$  and $\sigma_i \geq0.$}}
+
+If the LP's feasible region is bounded, then \textbf{d = 0}, and we may write \textbf{x} = $\sum \frac{i=k}{i=1} \sigma_i \textbf{b}_i$, where the $\sigma_i$ are nonnegative weights adding to 1. In this case, we see that any feasible \textbf{x} may be written as a \textbf{convex combination} of the LP's bfs. We now give two illustrations of Theorem 2.
+
+Consider the Leather Limited example. The feasible region is bounded. To illustrate Theorem 2, we can write the point $G$ = (20, 10) ($G$ is not a bfs!) in Figure 3 as a convex combination of the LP's bfs. Note from Figure 3 that point $G$ may be written as $\frac{1}{6}F$ + $\frac{5}{6}H$ [here $H$ = (24, 12)]. Then note that point $H$ may be written as .6$E$ + .4$C$. Putting these two relationships together, we may write point $G$ as  $\frac{1}{6}F$ + $\frac{5}{6}$(.6$E$ + .4$C$) = $\frac{1}{2}F$ + $\frac{1}{4}E$ + $\frac{2}{3}C$. This expresses point $G$ as a convex combination of the LP's extreme points.
+
+$$7x_1 + x^2_2 -  \frac{1}{10}e_1 = 28$$
+$$Extra additions$$\begin{itemize}
+ $$\Phi(r,\theta,\phi)=\left.\frac{2q}{4\pi\epsilon_0r}\right.\sum_{s=1}^\infty(\frac{a}{r})^2 P_{2s}(cos\theta).$$
+\end{itemize}
+
+\begin{tikzpicture}[scale=0.0735]
+
+\draw [<->, very thick, black]  (65, 0) -- (0, 0) -- (0, 65);
+
+\draw [ultra thick, blue](0,60) -- (30,0);
+ \filldraw[purple] (0,40) circle (20pt) node[anchor=south west] {D};
+ \filldraw[blue] (0,20) circle (20pt) node[anchor=south west] {B};
+ \filldraw[red] (22,12) circle (20pt) node[anchor=east] {H};
+ \filldraw[blue] (20,0) circle (20pt) node[anchor=north east] {F};
+ \node at (70,0) {$x_1$};
+
+\draw[ultra thick, green](0,20) -- (20,0);
+
+\draw[ultra thick, blue](0,40) -- (22,12);
+
+
+
+\end{tikzpicture}
+
+
+\end{document}
